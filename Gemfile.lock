@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odi_content_models.git
-  revision: e284459d19ec40939bdc2d5a3fefa48801389e26
+  revision: a7f9cff0e1593591d3666bc9400330b513b153f4
   specs:
     odi_content_models (0.0.1)
       govuk_content_models
@@ -109,6 +109,8 @@ GEM
       mail (> 2.2.5)
       mime-types
       xml-simple
+    bootstrap-datepicker-rails (1.1.1.7)
+      railties (>= 3.0)
     bson (1.6.4)
     bson_ext (1.6.4)
       bson (~> 1.6.4)
@@ -345,6 +347,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-ses
+  bootstrap-datepicker-rails
   capybara (= 1.1.4)
   capybara-webkit (= 0.12.1)
   ci_reporter
