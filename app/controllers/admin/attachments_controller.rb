@@ -16,6 +16,7 @@ class Admin::AttachmentsController < Admin::BaseController
     @attachment = Attachment.find(params[:id])
     respond_to do |format|
       format.json { render json: @attachment.as_json(methods: [:file_url, *AttachableWithMetadata::ATTACHMENT_METADATA_FIELDS.map { |m| "file_#{m}"}]) }
+      format.html
     end
   end
 
