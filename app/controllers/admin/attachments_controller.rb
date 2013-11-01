@@ -5,6 +5,11 @@ class Admin::AttachmentsController < Admin::BaseController
   #defaults :resource_class => Attachment, :collection_name => "attachments", :instance_name => "attachment"
 
   respond_to :json, :html
+  
+  def index
+    params[:page] ||= 1
+    @attachments = Attachment.all.page(params[:page])
+  end
 
   # FIXME: below is all WIP
   def show
