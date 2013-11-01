@@ -21,12 +21,28 @@ class Admin::AttachmentsController < Admin::BaseController
   end
 
   def create
-    @attachment = Attachment.new
+    @attachment = Attachment.new()
     @attachment.file = params[:attachment][:file]
-    if @attachment.save
-      render json: @attachment.as_json(methods: [:file_url, *AttachableWithMetadata::ATTACHMENT_METADATA_FIELDS.map { |m| "file_#{m}"}])
-    else
-      render json: { errors: @attachment.errors.full_messages }
+    respond_to do |format|
+      format.json do
+        if @attachment.save
+          render json: @attachment.as_json(methods: [:file_url, *AttachableWithMetadata::ATTACHMENT_METADATA_FIELDS.map { |m| "file_#{m}"}])
+        else
+          render json: { errors: @attachment.errors.full_messages }
+        end
+      end
+      format.html do
+        if @attachment.save
+          params[:attachment].except(:file).each do |metadata_field, value|
+            @attachment.send "#{metadata_field}=", value
+          end
+          flash.now[:alert] = "Sucessfully saved attachment"
+          render :template => "admin/attachments/show"
+        else
+          flash.now[:alert] = "We had some problems saving. Please check the form below."
+          render :template => "admin/attachments/edit"
+        end
+      end
     end
   end
 
