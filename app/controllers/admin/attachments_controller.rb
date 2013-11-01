@@ -35,11 +35,20 @@ class Admin::AttachmentsController < Admin::BaseController
     params[:attachment].each do |metadata_field, value|
       @attachment.send "#{metadata_field}=", value
     end
-
-    if @attachment.save
-      render json: @attachment.as_json(methods: [:file_url, *AttachableWithMetadata::ATTACHMENT_METADATA_FIELDS.map { |m| "file_#{m}"}])
-    else
-      render json: { errors: @attachment.errors.full_mesasges }
+    respond_to do |format|
+      format.json do
+        if @attachment.save
+          render json: @attachment.as_json(methods: [:file_url, *AttachableWithMetadata::ATTACHMENT_METADATA_FIELDS.map { |m| "file_#{m}"}])
+        else
+          render json: { errors: @attachment.errors.full_mesasges }
+        end
+      end
+      format.html do
+        unless @attachment.save
+          flash.now[:alert] = "We had some problems saving. Please check the form below."
+        end
+        render :template => "admin/attachments/show"
+      end
     end
   end
 
