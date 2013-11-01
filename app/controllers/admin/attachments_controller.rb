@@ -4,7 +4,7 @@ class Admin::AttachmentsController < Admin::BaseController
   #actions :create, :update, :destroy
   #defaults :resource_class => Attachment, :collection_name => "attachments", :instance_name => "attachment"
 
-  respond_to :json
+  respond_to :json, :html
 
   # FIXME: below is all WIP
   def show
