@@ -1,17 +1,17 @@
 # encoding: utf-8
 
 class NoisyWorkflow < ActionMailer::Base
-  default :from => "Florence (The ODI Publisher) <clement@theodi.org>"
+  default :from => "Ada (The ODI Publisher) <quirkafleeg@theodi.org>"
 
   def make_noise(action)
     @action = action
 
     if action.edition.business_proposition
       subject = "[PUBLISHER]-BUSINESS #{describe_action(@action)}"
-      recipient_emails = EMAIL_GROUPS[:business]
+      recipient_emails = workflow_recipient(action, :business)
     else
       subject = "[PUBLISHER] #{describe_action(@action)}"
-      recipient_emails = EMAIL_GROUPS[:citizen]
+      recipient_emails = workflow_recipient(action)
     end
 
     mail(:to => recipient_emails.join(', '), :subject => subject)
@@ -69,4 +69,10 @@ class NoisyWorkflow < ActionMailer::Base
       "Assigned: \"#{edition.title}\" (#{edition.format_name}) to #{recipient.name}"
     end
   end
+  
+  def workflow_recipient(action, group = :citizen)
+    r = [action.edition.assigned_to.email] rescue nil
+    r || EMAIL_GROUPS[group]
+  end
+  
 end
