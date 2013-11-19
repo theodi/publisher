@@ -78,7 +78,7 @@ class EditionProgressor
     end
     
     def permission_denied?(activity)
-      if activity == "publish"
+      if activity[:request_type].to_s == "publish"
         !self.actor.permissions.include?('publish')
       else
         false
