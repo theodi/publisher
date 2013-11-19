@@ -9,14 +9,24 @@ require 'edition_progressor'
 class DummyActor
   include WorkflowActor
 
+  def initialize(permissions = [])
+    @permissions = permissions
+  end
+
   def id
     "fake-id"
   end
+  
+  def permissions
+    @permissions
+  end
+  
 end
 
 class EditionProgressorTest < ActiveSupport::TestCase
   setup do
     @laura = DummyActor.new
+    @publisher = DummyActor.new(['publish'])
     @statsd = stub_everything
     @guide = FactoryGirl.create(:guide_edition, panopticon_id: FactoryGirl.create(:artefact).id)
     stub_register_published_content
@@ -51,6 +61,34 @@ class EditionProgressorTest < ActiveSupport::TestCase
 
     command = EditionProgressor.new(@guide, @laura, @statsd)
     refute command.progress(activity)
+  end
+
+  test "should not progress to publish if actor doesn't have publish permission" do
+    @guide.update_attribute(:state, :ready)
+
+    activity = {
+      :request_type       => "publish",
+      :comment            => "Blah",
+      :email_addresses    => "",
+      :customised_message => "Hello"
+    }
+
+    command = EditionProgressor.new(@guide, @laura, @statsd)
+    refute command.progress(activity)
+  end
+
+  test "can progress to publish if actor has publish permission" do
+    @guide.update_attribute(:state, :ready)
+
+    activity = {
+      :request_type       => "publish",
+      :comment            => "Blah",
+      :email_addresses    => "",
+      :customised_message => "Hello"
+    }
+
+    command = EditionProgressor.new(@guide, @publisher, @statsd)
+    assert command.progress(activity)
   end
 
   test "should not progress to fact check if the email addresses were invalid" do
