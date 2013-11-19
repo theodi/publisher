@@ -16,6 +16,9 @@ class EditionProgressor
     if invalid_fact_check_email_addresses?(activity)
       self.status_message = fact_check_error_message(activity)
       return false
+    elsif permission_denied?(activity)
+      self.status_message = "You do not have the correct permissions to publish content"
+      return false
     elsif actor.progress(edition, activity.dup)
       collect_edition_status_stats(activity[:request_type])
       self.status_message = success_message(activity[:request_type])
@@ -72,5 +75,13 @@ class EditionProgressor
 
     def description(r)
       r.format.underscore.humanize
+    end
+    
+    def permission_denied?(activity)
+      if activity == "publish"
+        !self.actor.permissions.include?('publish')
+      else
+        false
+      end
     end
 end
