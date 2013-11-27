@@ -67,7 +67,7 @@ gem 'epic-editor-rails', :github => 'zethussuen/epic-editor-rails'
 gem 'fog'
 
 group :assets do
-  gem "therubyracer", "~> 0.9.4"
+  gem "therubyracer", "~> 0.12.0"
   gem 'uglifier'
 end
 
