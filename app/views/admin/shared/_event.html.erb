@@ -21,4 +21,13 @@
               :prepend => '#',
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
 
+<% if @resource.artefact.tag_ids.include?("lunchtime-lecture") %>
+
+  <%= f.input :livestream,
+              :label => "Livestream available?",
+              :as => :select,
+              :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
+
+<% end %>
+
 </fieldset>
