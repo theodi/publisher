@@ -35,8 +35,6 @@
   
   <%= render partial: 'admin/shared/markdown_field', locals: { type: :description, form: f, :required => true }%>
 
-  <%= render partial: 'admin/shared/markdown_field', locals: { type: :statement, form: f, :required => true }%>
-
   <%= f.input :telephone,
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
 
