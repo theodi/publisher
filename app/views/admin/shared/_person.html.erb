@@ -11,6 +11,10 @@
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
   
   <%= f.input :affiliation,
+              :label => "Organisation",
+              :hint => "if applicable",
+              :as => :select,
+              :collection => Artefact.where(:kind => "organization").to_a.map {|p| [p.name, p.slug]},
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
 
   <%= f.input :role,
