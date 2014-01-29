@@ -1,0 +1,18 @@
+<fieldset class='form-horizontal'>
+  
+  <%= f.input :date,
+              :input_html => { :class => 'span7' , :disabled => @resource.published?, 'data-behaviour' => 'datepicker', :value => @resource.date ? @resource.date.strftime("%Y-%m-%d") : nil } %>
+
+</fieldset>
+
+<%= render partial: 'admin/shared/asset', locals: { attribute: :report, description: "report", resource: @resource, form: f, required: true }%>
+
+<% content_for :extra_javascript do %>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      jQuery('[data-behaviour~=datepicker]').datepicker({
+        format: "yyyy-mm-dd"
+      });
+    })
+  </script>
+<% end %>
