@@ -14,7 +14,8 @@ else
   gem 'gds-sso', '~> 3.0.5'
 end
 
-gem "govuk_content_models", github: 'theodi/govuk_content_models', branch: 'feature-lambda-format-validator'
+gem "govuk_content_models", '6.0.6'
+
 if ENV['CONTENT_MODELS_DEV']
   gem "odi_content_models", path: '../odi_content_models'
 else
@@ -42,7 +43,7 @@ gem 'has_scope'
 gem 'inherited_resources'
 gem 'kaminari', '0.13.0'
 gem 'lograge', '0.2.0'
-gem 'mongo', '1.6.2'  # Locking this down to avoid a replica set bug
+gem 'mongo', '1.7.1'
 gem "mongoid_rails_migrations", "1.0.0"
 gem 'null_logger'
 gem 'plek', '1.4.0'
