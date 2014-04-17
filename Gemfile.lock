@@ -18,10 +18,11 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odi_content_models.git
-  revision: 67550837282f8915384b0b74ff0d8b722271a0bf
+  revision: bc6311c71266bb8d583f9c365105024a727f0fe2
   specs:
     odi_content_models (0.0.1)
-      govuk_content_models
+      govuk_content_models (= 6.1.0)
+      mongoid_spacial
 
 GIT
   remote: git://github.com/theodi/odidown.git
@@ -247,6 +248,9 @@ GEM
       bundler (>= 1.0.0)
       rails (>= 3.2.0)
       railties (>= 3.2.0)
+    mongoid_spacial (0.2.17)
+      activesupport (~> 3.0)
+      mongoid (>= 2.1.0, < 3.0.0)
     multi_json (1.9.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
