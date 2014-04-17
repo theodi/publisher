@@ -11,10 +11,10 @@ gem 'aws-ses', require: 'aws/ses'
 if ENV['BUNDLE_DEV']
   gem 'gds-sso', path: '../gds-sso'
 else
-  gem 'gds-sso', '~> 3.0.5'
+  gem 'gds-sso', '9.2.0'
 end
 
-gem "govuk_content_models", '6.0.6'
+gem "govuk_content_models", '6.1.0'
 
 if ENV['CONTENT_MODELS_DEV']
   gem "odi_content_models", path: '../odi_content_models'
