@@ -28,6 +28,8 @@ namespace :panopticon do
         else
           logger.error "Encountered 4 timeouts for '#{edition.slug}', skipping"
         end
+      rescue GdsApi::HTTPErrorResponse => e
+        logger.error "#{edition.slug} returned #{e}, skipping"
       end
     end
   end
