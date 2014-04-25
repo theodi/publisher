@@ -14,9 +14,11 @@ namespace :panopticon do
       retry_count = 0
       begin
         # Optionally only index content with a given role
-        if ENV["ROLE"] && edition.artefact.roles.any? {|r| r.tag_id == ENV["ROLE"] }
-          logger.info "Registering #{edition.slug} [#{index}/#{edition_count}]"
-          edition.register_with_panopticon
+        if ENV["ROLE"]
+          if edition.artefact.roles.any? {|r| r.tag_id == ENV["ROLE"] }
+            logger.info "Registering #{edition.slug} [#{index}/#{edition_count}]"
+            edition.register_with_panopticon
+          end
         else
           logger.info "Registering #{edition.slug} [#{index}/#{edition_count}]"
           edition.register_with_panopticon
