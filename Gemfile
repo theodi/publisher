@@ -11,10 +11,10 @@ gem 'aws-ses', require: 'aws/ses'
 if ENV['BUNDLE_DEV']
   gem 'gds-sso', path: '../gds-sso'
 else
-  gem 'gds-sso', '~> 3.0.5'
+  gem 'gds-sso', '9.2.2'
 end
 
-gem "govuk_content_models", '6.0.6'
+gem "govuk_content_models", '6.1.0'
 
 if ENV['CONTENT_MODELS_DEV']
   gem "odi_content_models", path: '../odi_content_models'
@@ -47,7 +47,7 @@ gem 'mongo', '1.7.1'
 gem "mongoid_rails_migrations", "1.0.0"
 gem 'null_logger'
 gem 'plek', '1.4.0'
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.16'
 
 gem 'redis', '3.0.3', require: false # Only used in some importers
 gem 'mlanett-redis-lock', '0.2.2' # Only used in some importers
