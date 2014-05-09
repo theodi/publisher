@@ -79,7 +79,7 @@ group :test do
   gem 'database_cleaner'
 
   gem 'capybara', '1.1.4'
-  gem 'capybara-webkit', '0.12.1'
+  gem 'poltergeist'
   gem 'launchy'
 
   gem 'webmock'
