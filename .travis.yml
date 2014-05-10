@@ -28,7 +28,7 @@ notifications:
     on_failure: always
 env:
   global:
-  - GOVUK_APP_DOMAIN=test.gov.uk
+  - GOVUK_APP_DOMAIN=dev.gov.uk
   - RUBYOPT="-rpsych"
   - FACTER_govuk_platform=test
   - secure: ITbdZaUd3ffg9A+F2rS+Jflt5oVq06rd7uzAcOJFWWLe5cX0eHe+LhL9KCNGXp3/YCVSK95zbg2bfW2FXAPNuCYu1LjLP2dzxZJgCBY1zLuSHlPUopxwhnB0Yx9YIfoXF+U+HdMcK7juvNoIxuHF7J8xfh1MsHaJLON4TLmemPQ=
