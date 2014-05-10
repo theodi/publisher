@@ -24,6 +24,22 @@ class NoisyWorkflowTest < ActionMailer::TestCase
     NoisyWorkflow.make_noise(action)
   end
 
+  def action_email_with_recipient(action)
+    assignee = User.new(:name => 'Bob Fish', :email => 'bob@example.com')
+    guide = FactoryGirl.create(:guide_edition, :business_proposition => false, :title => 'Test Guide 2', :assigned_to => assignee)
+    requester = User.new(:name => 'Testing Person')
+    action = guide.actions.create(:request_type => action, :requester => requester)
+    NoisyWorkflow.make_noise(action)
+  end
+
+  def business_action_email_with_recipient(action)
+    assignee = User.new(:name => 'Bob Fish', :email => 'bob@example.com')
+    guide = FactoryGirl.create(:guide_edition, :business_proposition => true, :title => 'Test Guide 1', :assigned_to => assignee)
+    requester = User.new(:name => 'Testing Person')
+    action = guide.actions.create(:request_type => action, :requester => requester)
+    NoisyWorkflow.make_noise(action)
+  end
+
   def publisher_and_guide
     user = User.create(:name => "Ben")
     other_user = User.create(:name => "James")
@@ -96,7 +112,7 @@ class NoisyWorkflowTest < ActionMailer::TestCase
       end
     end
 
-    context "Setting the recipients" do
+    context "Setting the recipients if no assignee" do
       should "send to 'publisher-alerts-business' for a business edition" do
         email = business_action_email(Action::PUBLISH)
         assert_equal email.to.sort, ['quirkafleeg@theodi.org'].sort
@@ -111,5 +127,22 @@ class NoisyWorkflowTest < ActionMailer::TestCase
         assert_equal email.to.sort, ['quirkafleeg@theodi.org'].sort
       end
     end
+
+    context "Setting the recipients if there is an assignee" do
+      should "send to 'publisher-alerts-business' for a business edition" do
+        email = business_action_email_with_recipient(Action::PUBLISH)
+        assert_equal email.to.sort, ['bob@example.com'].sort
+        email = business_action_email_with_recipient(Action::APPROVE_REVIEW)
+        assert_equal email.to, ['bob@example.com']
+      end
+
+      should "send to 'publisher-alerts-citizen' for a non-business edition" do
+        email = action_email_with_recipient(Action::PUBLISH)
+        assert_equal email.to.sort, ['bob@example.com'].sort
+        email = action_email_with_recipient(Action::REQUEST_REVIEW)
+        assert_equal email.to.sort, ['bob@example.com'].sort
+      end
+    end
+
   end
 end

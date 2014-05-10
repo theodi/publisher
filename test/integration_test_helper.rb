@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'capybara/rails'
+require 'capybara/poltergeist'
 
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
@@ -71,4 +72,4 @@ class JavascriptIntegrationTest < ActionDispatch::IntegrationTest
   end
 end
 
-Capybara.javascript_driver = :webkit
+Capybara.javascript_driver = :poltergeist

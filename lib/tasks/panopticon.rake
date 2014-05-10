@@ -13,8 +13,16 @@ namespace :panopticon do
     Edition.published.to_a.each_with_index do |edition, index|
       retry_count = 0
       begin
-        logger.info "Registering #{edition.slug} [#{index}/#{edition_count}]"
-        edition.register_with_panopticon
+        # Optionally only index content with a given role
+        if ENV["ROLE"]
+          if edition.artefact.roles.any? {|r| r.tag_id == ENV["ROLE"] }
+            logger.info "Registering #{edition.slug} [#{index}/#{edition_count}]"
+            edition.register_with_panopticon
+          end
+        else
+          logger.info "Registering #{edition.slug} [#{index}/#{edition_count}]"
+          edition.register_with_panopticon
+        end
       rescue Mongoid::Errors::DocumentNotFound
         # This happens if an Edition doesn't have a corresponding Artefact
         logger.warn "Missing Artefact for #{edition.class.name} #{edition.slug}"
@@ -28,6 +36,8 @@ namespace :panopticon do
         else
           logger.error "Encountered 4 timeouts for '#{edition.slug}', skipping"
         end
+      rescue GdsApi::HTTPErrorResponse => e
+        logger.error "#{edition.slug} returned #{e}, skipping"
       end
     end
   end

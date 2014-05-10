@@ -11,10 +11,11 @@ gem 'aws-ses', require: 'aws/ses'
 if ENV['BUNDLE_DEV']
   gem 'gds-sso', path: '../gds-sso'
 else
-  gem 'gds-sso', '~> 3.0.5'
+  gem 'gds-sso', '9.2.2'
 end
 
-gem "govuk_content_models", github: 'theodi/govuk_content_models', branch: 'feature-lambda-format-validator'
+gem "govuk_content_models", '6.1.0'
+
 if ENV['CONTENT_MODELS_DEV']
   gem "odi_content_models", path: '../odi_content_models'
 else
@@ -42,11 +43,11 @@ gem 'has_scope'
 gem 'inherited_resources'
 gem 'kaminari', '0.13.0'
 gem 'lograge', '0.2.0'
-gem 'mongo', '1.6.2'  # Locking this down to avoid a replica set bug
+gem 'mongo', '1.7.1'
 gem "mongoid_rails_migrations", "1.0.0"
 gem 'null_logger'
 gem 'plek', '1.4.0'
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.16'
 
 gem 'redis', '3.0.3', require: false # Only used in some importers
 gem 'mlanett-redis-lock', '0.2.2' # Only used in some importers
@@ -67,7 +68,7 @@ gem 'epic-editor-rails', :github => 'zethussuen/epic-editor-rails'
 gem 'fog'
 
 group :assets do
-  gem "therubyracer", "~> 0.9.4"
+  gem "therubyracer", "~> 0.12.0"
   gem 'uglifier'
 end
 
@@ -78,7 +79,7 @@ group :test do
   gem 'database_cleaner'
 
   gem 'capybara', '1.1.4'
-  gem 'capybara-webkit', '0.12.1'
+  gem 'poltergeist'
   gem 'launchy'
 
   gem 'webmock'

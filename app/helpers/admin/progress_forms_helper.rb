@@ -6,17 +6,27 @@ module Admin::ProgressFormsHelper
       ["Publish",          "publish"]
     ].map { |args| progress_form(edition, *args) }.join("\n").html_safe
   end
+  
+  def workflow_disabled?(edition, activity)
+    check_method = "can_#{activity}?".to_sym
+    disabled = !edition.send(check_method)
+    
+    if activity == "publish"
+      disabled ||= !current_user.permissions.include?('publish')     
+    end
+    
+    disabled
+  end
 
   def progress_form(edition, title, activity, placeholder=nil)
     path_method  = "progress_admin_edition_path".to_sym
     path         = send(path_method, edition)
-    check_method = "can_#{activity}?".to_sym
 
     render(
       :partial => 'admin/shared/activity_form',
       :locals => {
         :url => path, :title => title, :id => activity+"_form",
-        :disabled => !edition.send(check_method), :activity => activity
+        :disabled => workflow_disabled?(edition, activity), :activity => activity
       }
     )
   end
@@ -66,7 +76,7 @@ module Admin::ProgressFormsHelper
       ["Publish",          "publish"]
     ].map { |title, activity|
       check_method = "can_#{activity}?".to_sym
-      disabled = edition.send(check_method) ? "" : "disabled"
+      disabled = !workflow_disabled?(edition, activity) ? "" : "disabled"
       %{<button data-toggle="modal" href="##{activity}_form" class="btn btn-primary btn-large" value="#{title}" type="submit" #{disabled}>#{title}</button>}
     }.join("\n").html_safe
   end
