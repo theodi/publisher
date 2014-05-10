@@ -1,16 +1,35 @@
 language: ruby
 rvm:
-  - 1.9.3-p484
-env:
-  - DISPLAY=":99" GOVUK_APP_DOMAIN=test.gov.uk RUBYOPT="-rpsych" FACTER_govuk_platform=test
+- 1.9.3
 services:
-  - mongodb
+- mongodb
+- redis
 script:
-  - bundle exec rake db:mongoid:drop
-  - bundle exec rake ci:setup:minitest test
+  - bundle exec rake
 bundler_args: --without=development
+after_success:
+- ! '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
+  curl -v -X DELETE -u $GITHUB_USER:$GITHUB_PASSWORD "https://api.github.com/repos/$TRAVIS_REPO_SLUG/git/refs/tags/CURRENT"'
+- ! '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
+  curl -v -X POST -d ''{"ref":"refs/tags/CURRENT","sha":"''$TRAVIS_COMMIT''"}''  --header
+  "Content-Type:application/json" -u $GITHUB_USER:$GITHUB_PASSWORD "https://api.github.com/repos/$TRAVIS_REPO_SLUG/git/refs"'
 branches:
   except:
     - release
+    - CURRENT
 notifications:
   email: false
+  irc:
+    channels:
+    - irc.freenode.net#theodi
+    template:
+    - ! '%{repository} %{branch} - %{message} %{build_url}'
+    on_success: change
+    on_failure: always
+env:
+  global:
+  - GOVUK_APP_DOMAIN=dev.gov.uk
+  - RUBYOPT="-rpsych"
+  - FACTER_govuk_platform=test
+  - secure: ITbdZaUd3ffg9A+F2rS+Jflt5oVq06rd7uzAcOJFWWLe5cX0eHe+LhL9KCNGXp3/YCVSK95zbg2bfW2FXAPNuCYu1LjLP2dzxZJgCBY1zLuSHlPUopxwhnB0Yx9YIfoXF+U+HdMcK7juvNoIxuHF7J8xfh1MsHaJLON4TLmemPQ=
+  - secure: E/DpCD1/0uWWRmQJpnjkJFDiH1kQeIZVWVAGtHCCjWrbAjvBV4oYHnn8DuwAH6pCGBi9e8HM5cpQaADYoXgU+7sMbubqVd35N0KUDt16ZP/um2RbqsBqXtfW/c/CPywVTa0TrgZ7bjZMn/ZhQbRuiS1wXRHm3mQDFYuukGen4UU=
