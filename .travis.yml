@@ -5,8 +5,7 @@ services:
 - mongodb
 - redis
 script:
-  - bundle exec rake db:mongoid:drop
-  - bundle exec rake ci:setup:minitest test
+  - bundle exec rake
 bundler_args: --without=development
 after_success:
 - ! '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
