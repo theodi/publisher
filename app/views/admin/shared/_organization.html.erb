@@ -6,31 +6,36 @@
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
 
   <%= f.input :joined_at,
+              :hint => "In format yyyy-mm-dd",
               :input_html => { :class => 'span7' , :disabled => @resource.published?, 'data-behaviour' => 'datepicker', :value => @resource.joined_at.try(:strftime, "%Y-%m-%d") } %>
+
+  <%= f.input :graduated,
+              :hint => "In format yyyy-mm-dd",
+              :input_html => { :class => 'span7' , :disabled => @resource.published?, 'data-behaviour' => 'datepicker', :value => @resource.graduated.try(:strftime, "%Y-%m-%d") } %>
 
   <%= f.input :involvement,
               :as => :text,
               :input_html => { :class => 'span7', :rows => '5', :disabled => @resource.published? } %>
-              
+
   <%= f.input :want_to_meet,
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
-                          
+
   <%= f.input :case_study,
               :as => :text,
               :input_html => { :class => 'span7' , :rows => '10', :disabled => @resource.published? } %>
 
   <%= render partial: 'admin/shared/asset', locals: { attribute: :logo, description: "logo", resource: @resource, form: f }%>
-  
+
 </fieldset>
 
 <fieldset class='form-horizontal'>
 
   <legend>Contact Details</legend>
-  
+
   <%= f.input :url,
               :label => "Website",
               :as => :url,
-              :input_html => { :class => 'span7' , :disabled => @resource.published? } %>  
+              :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
 
   <%= f.input :telephone,
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
@@ -42,7 +47,7 @@
   <%= f.input :twitter,
               :prepend => "@",
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
-              
+
   <%= f.input :linkedin,
               :as => :url,
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
