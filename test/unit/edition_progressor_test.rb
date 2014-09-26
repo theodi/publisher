@@ -29,6 +29,11 @@ class EditionProgressorTest < ActiveSupport::TestCase
     @publisher = DummyActor.new(['publish'])
     @statsd = stub_everything
     @guide = FactoryGirl.create(:guide_edition, panopticon_id: FactoryGirl.create(:artefact).id)
+    @keyworded = FactoryGirl.create(:guide_edition, panopticon_id: FactoryGirl.create(:artefact).id)
+    tag = Tag.find_or_create_by(tag_id: "test", title: "test", tag_type: "keyword")
+    @artefact = @keyworded.artefact
+    @artefact.tags << tag
+    @artefact.save
     stub_register_published_content
   end
 
@@ -64,7 +69,7 @@ class EditionProgressorTest < ActiveSupport::TestCase
   end
 
   test "should not progress to publish if actor doesn't have publish permission" do
-    @guide.update_attribute(:state, :ready)
+    @keyworded.update_attribute(:state, :ready)
 
     activity = {
       :request_type       => "publish",
@@ -73,11 +78,11 @@ class EditionProgressorTest < ActiveSupport::TestCase
       :customised_message => "Hello"
     }
 
-    command = EditionProgressor.new(@guide, @laura, @statsd)
+    command = EditionProgressor.new(@keyworded, @laura, @statsd)
     refute command.progress(activity)
   end
 
-  test "can progress to publish if actor has publish permission" do
+  test "should not progress to publish if artefact has no keywords" do
     @guide.update_attribute(:state, :ready)
 
     activity = {
@@ -88,6 +93,20 @@ class EditionProgressorTest < ActiveSupport::TestCase
     }
 
     command = EditionProgressor.new(@guide, @publisher, @statsd)
+    refute command.progress(activity)
+  end
+
+  test "can progress to publish if actor has publish permission and artefact has keywords" do
+    @keyworded.update_attribute(:state, :ready)
+    
+    activity = {
+      :request_type       => "publish",
+      :comment            => "Blah",
+      :email_addresses    => "",
+      :customised_message => "Hello"
+    }
+
+    command = EditionProgressor.new(@keyworded, @publisher, @statsd)
     assert command.progress(activity)
   end
 
