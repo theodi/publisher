@@ -66,6 +66,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'country-select', :github => 'ninkibah/country-select'
 gem 'epic-editor-rails', :github => 'zethussuen/epic-editor-rails'
 gem 'fog'
+gem 'airbrake'
 
 group :assets do
   gem "therubyracer", "~> 0.12.0"
