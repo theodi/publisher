@@ -3,7 +3,7 @@ task :check_for_bad_time_handling do
   matching_files = directories.select do |filename|
     match = false
     File.open(filename) do |file|
-      match = file.grep(%r{Time\.(now|utc|parse)}).any?
+      match = file.grep(%r{Time\.(now|utc|parse)}).any? rescue nil
     end
     match
   end
