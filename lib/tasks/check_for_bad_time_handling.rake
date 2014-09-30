@@ -1,11 +1,13 @@
 task :check_for_bad_time_handling do
   directories = Dir.glob(File.join(Rails.root, '**', '*.rb'))
   matching_files = directories.select do |filename|
-    match = false
-    File.open(filename) do |file|
-      match = file.grep(%r{Time\.(now|utc|parse)}).any?
+    unless filename.match /vendor\/bundle/
+      match = false
+      File.open(filename) do |file|
+        match = file.grep(%r{Time\.(now|utc|parse)}).any?
+      end
+      match
     end
-    match
   end
   if matching_files.any?
     raise <<-MSG
