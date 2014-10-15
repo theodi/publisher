@@ -79,7 +79,7 @@ class EditionProgressor
     
     def permission_denied?(activity)
       if activity[:request_type].to_s == "publish"
-        !self.actor.permissions.include?('publish')
+        !self.actor.permissions.include?('publish') || edition.artefact.keywords.empty?
       else
         false
       end
