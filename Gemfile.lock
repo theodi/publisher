@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/gds-api-adapters.git
-  revision: 1c11cf091bb28fd1cc27e429e11b91e98739864f
+  revision: 1a963d9064719d1aff608e6b7232166ae4af489b
   specs:
     gds-api-adapters (7.25.0)
       activesupport
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odi_content_models.git
-  revision: eb77465417c09ca1a2fa1b918a78f713aef99fc8
+  revision: d238a8736a0535f269bb2d7937f0d1aa1f4d1163
   specs:
     odi_content_models (0.0.1)
       govuk_content_models (= 6.1.0)
@@ -26,23 +26,23 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odidown.git
-  revision: e53322e5c6e7eea3bfef3a85371f25755b79dcfe
+  revision: acc7ebf5ced83b4bd1bbe5bc6aee6d6f27d142b0
   specs:
     odidown (0.0.1)
       govspeak (~> 1.2.3)
 
 GIT
   remote: git://github.com/theodi/odlifier.git
-  revision: 00bc05b1935cbc8c5fe56339904b3abdd50a2d98
+  revision: 46a347a39fe629dfc072d0739b55d579a76a27d2
   specs:
-    odlifier (0.0.1)
+    odlifier (0.1.1)
       httparty
 
 GIT
   remote: git://github.com/zethussuen/epic-editor-rails.git
-  revision: 66e0cac7d901d36c430adbc6c9429b9c4a5e2503
+  revision: d4c2b29e537135969e2ccc763cd119eb30fd097e
   specs:
-    epic-editor-rails (0.2.0)
+    epic-editor-rails (0.2.3)
       railties (>= 3.2, < 5.0)
 
 GIT
@@ -73,6 +73,7 @@ GEM
   remote: https://rubygems.org/
   remote: https://BnrJb6FZyzspBboNJzYZ@gem.fury.io/govuk/
   specs:
+    CFPropertyList (2.2.8)
     PriorityQueue (0.1.2)
     actionmailer (3.2.16)
       actionpack (= 3.2.16)
@@ -101,18 +102,18 @@ GEM
     activesupport (3.2.16)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
-    addressable (2.3.4)
+    addressable (2.3.6)
     airbrake (4.1.0)
       builder
       multi_json
     ansi (1.4.3)
     arel (3.0.3)
-    aws-ses (0.4.4)
+    aws-ses (0.6.0)
       builder
       mail (> 2.2.5)
       mime-types
       xml-simple
-    bootstrap-datepicker-rails (1.1.1.7)
+    bootstrap-datepicker-rails (1.3.0.2)
       railties (>= 3.0)
     bson (1.7.1)
     bson_ext (1.7.1)
@@ -125,30 +126,30 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    childprocess (0.3.9)
+    childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
-    chronic (0.6.7)
-    ci_reporter (1.7.0)
+    chronic (0.10.2)
+    ci_reporter (2.0.0)
       builder (>= 2.1.2)
-    commonjs (0.2.6)
-    crack (0.3.1)
+    commonjs (0.2.7)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     daemons (1.1.9)
-    database_cleaner (0.8.0)
+    database_cleaner (1.3.0)
     differ (0.1.2)
-    dotenv (0.8.0)
-    dotenv-rails (0.8.0)
-      dotenv (= 0.8.0)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
     exception_notification (2.6.1)
       actionmailer (>= 3.0.4)
-    excon (0.25.3)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
-    factory_girl (3.6.1)
+    excon (0.41.0)
+    execjs (2.2.2)
+    factory_girl (4.5.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (3.6.0)
-      factory_girl (~> 3.6.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     faker (1.1.2)
       i18n (~> 0.5)
@@ -156,21 +157,67 @@ GEM
       multipart-post (>= 1.2, < 3)
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
-    ffi (1.8.1)
-    fog (1.15.0)
+    ffi (1.9.6)
+    fission (0.5.0)
+      CFPropertyList (~> 2.2)
+    fog (1.25.0)
+      fog-brightbox (~> 0.4)
+      fog-core (~> 1.25)
+      fog-json
+      fog-profitbricks
+      fog-radosgw (>= 0.0.2)
+      fog-sakuracloud (>= 0.0.4)
+      fog-softlayer
+      fog-terremark
+      fog-vmfusion
+      fog-voxel
+      fog-xml (~> 0.1.1)
+      ipaddress (~> 0.5)
+      nokogiri (~> 1.5, >= 1.5.11)
+      opennebula
+    fog-brightbox (0.6.1)
+      fog-core (~> 1.22)
+      fog-json
+      inflecto
+    fog-core (1.25.0)
       builder
-      excon (~> 0.25.0)
-      formatador (~> 0.2.0)
+      excon (~> 0.38)
+      formatador (~> 0.2)
       mime-types
-      multi_json (~> 1.0)
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
-      nokogiri (~> 1.5)
-      ruby-hmac
-    foreman (0.63.0)
-      dotenv (>= 0.7)
-      thor (>= 0.13.6)
-    formatador (0.2.4)
+    fog-json (1.0.0)
+      multi_json (~> 1.0)
+    fog-profitbricks (0.0.1)
+      fog-core
+      fog-xml
+      nokogiri
+    fog-radosgw (0.0.3)
+      fog-core (>= 1.21.0)
+      fog-json
+      fog-xml (>= 0.0.1)
+    fog-sakuracloud (0.1.1)
+      fog-core
+      fog-json
+    fog-softlayer (0.3.24)
+      fog-core
+      fog-json
+    fog-terremark (0.0.3)
+      fog-core
+      fog-xml
+    fog-vmfusion (0.0.1)
+      fission
+      fog-core
+    fog-voxel (0.0.1)
+      fog-core
+      fog-xml
+    fog-xml (0.1.1)
+      fog-core
+      nokogiri (~> 1.5, >= 1.5.11)
+    foreman (0.76.0)
+      dotenv (~> 1.0.2)
+      thor (~> 0.19.1)
+    formatador (0.2.5)
     gds-sso (9.2.2)
       omniauth-gds (>= 3.0.0)
       rack-accept (~> 0.4.4)
@@ -190,39 +237,40 @@ GEM
       plek
       state_machine
     has_scope (0.5.1)
-    hashie (2.1.1)
+    hashie (3.3.2)
     hike (1.2.3)
-    htmlentities (4.3.1)
+    htmlentities (4.3.2)
     http_parser.rb (0.5.3)
-    httparty (0.11.0)
-      multi_json (~> 1.0)
+    httparty (0.13.3)
+      json (~> 1.8)
       multi_xml (>= 0.5.2)
-    i18n (0.6.9)
-    inherited_resources (1.3.1)
+    i18n (0.6.11)
+    inflecto (0.0.2)
+    inherited_resources (1.4.0)
       has_scope (~> 0.5.0)
-      responders (~> 0.6)
+      responders (~> 0.9)
+    ipaddress (0.8.0)
     journey (1.0.4)
-    jquery-rails (2.0.2)
-      railties (>= 3.2.0, < 5.0)
-      thor (~> 0.14)
+    jquery-rails (3.1.2)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
     json (1.8.1)
-    jwt (0.1.11)
-      multi_json (>= 1.5)
+    jwt (1.2.0)
     kaminari (0.13.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
     kramdown (0.13.8)
-    launchy (2.1.1)
+    launchy (2.4.3)
       addressable (~> 2.3)
-    less (2.2.1)
-      commonjs (~> 0.2.6)
-    less-rails (2.2.3)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.6.0)
       actionpack (>= 3.1)
-      less (~> 2.2.0)
-    less-rails-bootstrap (2.0.13)
-      less-rails (~> 2.2.0)
-    libv8 (3.16.14.3)
+      less (~> 2.6.0)
+    less-rails-bootstrap (3.3.1.0)
+      less-rails (~> 2.6.0)
+    libv8 (3.16.14.7)
     link_header (0.0.8)
     lograge (0.2.0)
       actionpack
@@ -232,9 +280,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    metaclass (0.0.1)
+    metaclass (0.0.4)
     mime-types (1.25.1)
-    mini_portile (0.5.3)
+    mini_portile (0.6.1)
     minitest (3.3.0)
     mlanett-redis-lock (0.2.2)
       redis
@@ -254,31 +302,36 @@ GEM
     mongoid_spacial (0.2.17)
       activesupport (~> 3.0)
       mongoid (>= 2.1.0, < 3.0.0)
-    multi_json (1.9.2)
+    multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    net-scp (1.1.2)
+    net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (2.7.0)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    net-ssh (2.9.1)
+    nokogiri (1.6.4.1)
+      mini_portile (~> 0.6.0)
     null_logger (0.0.1)
-    oauth2 (0.9.3)
+    oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
-      jwt (~> 0.1.8)
+      jwt (~> 1.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
-    omniauth (1.2.1)
-      hashie (>= 1.2, < 3)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
       rack (~> 1.0)
-    omniauth-gds (3.0.0)
+    omniauth-gds (3.1.0)
+      multi_json (~> 1.10)
       omniauth-oauth2 (~> 1.0)
-    omniauth-oauth2 (1.1.2)
+    omniauth-oauth2 (1.2.0)
       faraday (>= 0.8, < 0.10)
       multi_json (~> 1.3)
-      oauth2 (~> 0.9.3)
+      oauth2 (~> 1.0)
       omniauth (~> 1.2)
+    opennebula (4.10.1)
+      json
+      nokogiri
+      rbvmomi
     plek (1.4.0)
     poltergeist (1.0.3)
       capybara (~> 1.1)
@@ -286,7 +339,7 @@ GEM
       faye-websocket (~> 0.4.4)
       http_parser.rb (~> 0.5.3)
       multi_json (~> 1.0)
-    polyglot (0.3.4)
+    polyglot (0.3.5)
     rack (1.4.5)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -311,32 +364,37 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.3.1)
+    rake (10.4.0)
+    rbvmomi (1.8.2)
+      builder
+      nokogiri (>= 1.4.1)
+      trollop
     rdoc (3.12.2)
       json (~> 1.4)
     redis (3.0.3)
     ref (1.0.5)
-    responders (0.9.2)
+    responders (0.9.3)
       railties (~> 3.1)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
-    retriable (1.3.2)
-    reverse_markdown (0.3.0)
+    rest-client (1.6.8)
+      mime-types (~> 1.16)
+      rdoc (>= 2.4.2)
+    retriable (1.4.1)
+    reverse_markdown (0.6.0)
       nokogiri
-    ruby-hmac (0.4.0)
-    rubyzip (0.9.9)
+    rubyzip (1.1.6)
+    safe_yaml (1.0.4)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
-    selenium-webdriver (2.33.0)
-      childprocess (>= 0.2.5)
+    selenium-webdriver (2.44.0)
+      childprocess (~> 0.5)
       multi_json (~> 1.0)
-      rubyzip
-      websocket (~> 1.0.4)
-    shoulda (3.1.1)
-      shoulda-context (~> 1.0)
-      shoulda-matchers (~> 1.2)
-    shoulda-context (1.0.0)
-    shoulda-matchers (1.2.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
+    shoulda (3.5.0)
+      shoulda-context (~> 1.0, >= 1.0.1)
+      shoulda-matchers (>= 1.4.1, < 3.0)
+    shoulda-context (1.2.1)
+    shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
     simplecov (0.6.4)
       multi_json (~> 1.0)
@@ -344,42 +402,42 @@ GEM
     simplecov-html (0.5.3)
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
-    sprockets (2.2.2)
+    sprockets (2.2.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     state_machine (1.2.0)
     statsd-ruby (1.0.0)
-    therubyracer (0.12.0)
+    therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
-    thin (1.5.1)
-      daemons (>= 1.0.9)
-      eventmachine (>= 0.12.6)
-      rack (>= 1.0.0)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
     thor (0.19.1)
     tilt (1.4.1)
-    timecop (0.4.4)
+    timecop (0.7.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    trollop (2.0)
     turn (0.9.6)
       ansi
-    tzinfo (0.3.39)
-    uglifier (1.2.7)
+    tzinfo (0.3.42)
+    uglifier (2.5.3)
       execjs (>= 0.3.0)
-      multi_json (~> 1.3)
+      json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
-    webmock (1.8.7)
-      addressable (>= 2.2.7)
-      crack (>= 0.1.7)
-    websocket (1.0.7)
-    whenever (0.7.3)
-      activesupport (>= 2.3.4)
-      chronic (~> 0.6.3)
-    xml-simple (1.1.1)
+    webmock (1.20.4)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+    websocket (1.2.1)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
+    xml-simple (1.1.4)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
