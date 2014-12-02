@@ -61,7 +61,7 @@ gem 'whenever', require: false
 gem 'jquery-rails'
 gem 'less-rails-bootstrap'
 gem 'thin'
-gem 'foreman'
+gem 'foreman', '< 0.65.0'
 gem 'bootstrap-datepicker-rails'
 gem 'country-select', :github => 'ninkibah/country-select'
 gem 'epic-editor-rails', :github => 'zethussuen/epic-editor-rails'
