@@ -431,9 +431,9 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
-    webmock (1.20.4)
-      addressable (>= 2.3.6)
-      crack (>= 0.3.2)
+    webmock (1.8.10)
+      addressable (>= 2.2.7)
+      crack (>= 0.1.7)
     websocket (1.2.1)
     whenever (0.9.4)
       chronic (>= 0.6.3)
@@ -498,5 +498,5 @@ DEPENDENCIES
   timecop
   turn (= 0.9.6)
   uglifier
-  webmock
+  webmock (~> 1.8.7)
   whenever
