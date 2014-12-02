@@ -263,13 +263,13 @@ GEM
     kramdown (0.13.8)
     launchy (2.4.3)
       addressable (~> 2.3)
-    less (2.6.0)
-      commonjs (~> 0.2.7)
-    less-rails (2.6.0)
+    less (2.2.2)
+      commonjs (~> 0.2.6)
+    less-rails (2.2.6)
       actionpack (>= 3.1)
-      less (~> 2.6.0)
-    less-rails-bootstrap (3.3.1.0)
-      less-rails (~> 2.6.0)
+      less (~> 2.2.0)
+    less-rails-bootstrap (2.0.13)
+      less-rails (~> 2.2.0)
     libv8 (3.16.14.7)
     link_header (0.0.8)
     lograge (0.2.0)
@@ -470,7 +470,7 @@ DEPENDENCIES
   jquery-rails
   kaminari (= 0.13.0)
   launchy
-  less-rails-bootstrap
+  less-rails-bootstrap (~> 2.0.0)
   lograge (= 0.2.0)
   minitest (= 3.3.0)
   mlanett-redis-lock (= 0.2.2)
