@@ -308,7 +308,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
-    nokogiri (1.6.4.1)
+    nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     null_logger (0.0.1)
     oauth2 (1.0.0)
@@ -379,7 +379,7 @@ GEM
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
     retriable (1.4.1)
-    reverse_markdown (0.6.0)
+    reverse_markdown (0.3.0)
       nokogiri
     rubyzip (1.1.6)
     safe_yaml (1.0.4)
@@ -488,7 +488,7 @@ DEPENDENCIES
   redis (= 3.0.3)
   rest-client
   retriable
-  reverse_markdown
+  reverse_markdown (~> 0.3.0)
   shoulda
   simplecov (~> 0.6.4)
   simplecov-rcov (~> 0.2.3)

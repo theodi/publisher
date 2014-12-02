@@ -53,7 +53,7 @@ gem 'redis', '3.0.3', require: false # Only used in some importers
 gem 'mlanett-redis-lock', '0.2.2' # Only used in some importers
 gem 'rest-client', require: false # Only used in some importers
 gem 'retriable', require: false # Only used in some importers
-gem 'reverse_markdown', require: false # Only used in some importers
+gem 'reverse_markdown', '~> 0.3.0', require: false # Only used in some importers
 
 gem 'statsd-ruby', '1.0.0', require: false
 gem 'whenever', require: false
