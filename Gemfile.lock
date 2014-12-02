@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odlifier.git
-  revision: 46a347a39fe629dfc072d0739b55d579a76a27d2
+  revision: ec25b6d1c32343559ec93d31a6bc6da48f718338
   specs:
     odlifier (0.1.1)
       httparty
@@ -129,7 +129,7 @@ GEM
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     chronic (0.10.2)
-    ci_reporter (1.8.4)
+    ci_reporter (1.9.3)
       builder (>= 2.1.2)
     commonjs (0.2.7)
     crack (0.4.2)
@@ -175,10 +175,10 @@ GEM
       ipaddress (~> 0.5)
       nokogiri (~> 1.5, >= 1.5.11)
       opennebula
-    fog-brightbox (0.6.1)
+    fog-brightbox (0.7.0)
       fog-core (~> 1.22)
       fog-json
-      inflecto
+      inflecto (~> 0.0.2)
     fog-core (1.25.0)
       builder
       excon (~> 0.38)
@@ -199,7 +199,7 @@ GEM
     fog-sakuracloud (0.1.1)
       fog-core
       fog-json
-    fog-softlayer (0.3.24)
+    fog-softlayer (0.3.25)
       fog-core
       fog-json
     fog-terremark (0.0.3)
@@ -208,7 +208,7 @@ GEM
     fog-vmfusion (0.0.1)
       fission
       fog-core
-    fog-voxel (0.0.1)
+    fog-voxel (0.0.2)
       fog-core
       fog-xml
     fog-xml (0.1.1)
@@ -364,7 +364,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.4.0)
+    rake (10.4.1)
     rbvmomi (1.8.2)
       builder
       nokogiri (>= 1.4.1)
@@ -431,7 +431,7 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
-    webmock (1.8.10)
+    webmock (1.8.11)
       addressable (>= 2.2.7)
       crack (>= 0.1.7)
     websocket (1.2.1)
