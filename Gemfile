@@ -53,15 +53,15 @@ gem 'redis', '3.0.3', require: false # Only used in some importers
 gem 'mlanett-redis-lock', '0.2.2' # Only used in some importers
 gem 'rest-client', require: false # Only used in some importers
 gem 'retriable', require: false # Only used in some importers
-gem 'reverse_markdown', require: false # Only used in some importers
+gem 'reverse_markdown', '~> 0.3.0', require: false # Only used in some importers
 
 gem 'statsd-ruby', '1.0.0', require: false
 gem 'whenever', require: false
 
 gem 'jquery-rails'
-gem 'less-rails-bootstrap'
+gem 'less-rails-bootstrap', '~> 2.0.0'
 gem 'thin'
-gem 'foreman'
+gem 'foreman', '< 0.65.0'
 gem 'bootstrap-datepicker-rails'
 gem 'country-select', :github => 'ninkibah/country-select'
 gem 'epic-editor-rails', :github => 'zethussuen/epic-editor-rails'
@@ -83,7 +83,7 @@ group :test do
   gem 'poltergeist'
   gem 'launchy'
 
-  gem 'webmock'
+  gem 'webmock', '~> 1.8.7'
   gem 'mocha', '0.13.3', :require => false
   gem 'factory_girl_rails'
   gem 'faker', '1.1.2'
@@ -92,5 +92,5 @@ group :test do
 
   gem 'simplecov', '~> 0.6.4', :require => false
   gem 'simplecov-rcov', '~> 0.2.3', :require => false
-  gem 'ci_reporter'
+  gem 'ci_reporter', "~> 1.0"
 end
