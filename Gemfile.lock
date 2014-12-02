@@ -129,7 +129,7 @@ GEM
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     chronic (0.10.2)
-    ci_reporter (2.0.0)
+    ci_reporter (1.8.4)
       builder (>= 2.1.2)
     commonjs (0.2.7)
     crack (0.4.2)
@@ -449,7 +449,7 @@ DEPENDENCIES
   aws-ses
   bootstrap-datepicker-rails
   capybara (= 1.1.4)
-  ci_reporter
+  ci_reporter (~> 1.0)
   country-select!
   database_cleaner
   dotenv-rails
