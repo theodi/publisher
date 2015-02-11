@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odlifier.git
-  revision: 42922a4bc0805a73a0ff0004f5bed1849a41c0c2
+  revision: 7ea6e7fe15ea4507e18e4948e75fa599b1e9b029
   specs:
     odlifier (0.1.1)
       httparty
@@ -102,7 +102,7 @@ GEM
     activesupport (3.2.21)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
-    addressable (2.3.6)
+    addressable (2.3.7)
     airbrake (4.1.0)
       builder
       multi_json
@@ -141,7 +141,7 @@ GEM
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
     erubis (2.7.0)
-    eventmachine (1.0.6)
+    eventmachine (1.0.7)
     exception_notification (2.6.1)
       actionmailer (>= 3.0.4)
     excon (0.44.1)
@@ -479,8 +479,8 @@ DEPENDENCIES
   gds-api-adapters!
   gds-sso (= 9.2.2)
   govuk_content_models (= 6.1.0)
-  has_scope
-  inherited_resources
+  has_scope (= 0.5.1)
+  inherited_resources (= 1.4)
   jquery-rails
   kaminari (= 0.13.0)
   launchy
