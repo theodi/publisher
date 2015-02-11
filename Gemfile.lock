@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odlifier.git
-  revision: 0188fb530585153eeeff609a40a8cf0a55b8a683
+  revision: 7ea6e7fe15ea4507e18e4948e75fa599b1e9b029
   specs:
     odlifier (0.1.1)
       httparty
@@ -257,9 +257,7 @@ GEM
       mongoid (~> 2.5)
       plek
       state_machine
-    has_scope (0.6.0)
-      actionpack (>= 3.2, < 5)
-      activesupport (>= 3.2, < 5)
+    has_scope (0.5.1)
     hashie (3.4.0)
     hike (1.2.3)
     htmlentities (4.3.3)
@@ -269,11 +267,9 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
     inflecto (0.0.2)
-    inherited_resources (1.6.0)
-      actionpack (>= 3.2, < 5)
-      has_scope (~> 0.6.0.rc)
-      railties (>= 3.2, < 5)
-      responders
+    inherited_resources (1.4.0)
+      has_scope (~> 0.5.0)
+      responders (~> 0.9)
     ipaddress (0.8.0)
     journey (1.0.4)
     jquery-rails (3.1.2)
@@ -392,8 +388,8 @@ GEM
       json (~> 1.4)
     redis (3.0.3)
     ref (1.0.5)
-    responders (1.1.2)
-      railties (>= 3.2, < 4.2)
+    responders (0.9.3)
+      railties (~> 3.1)
     rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
@@ -483,8 +479,8 @@ DEPENDENCIES
   gds-api-adapters!
   gds-sso (= 9.2.2)
   govuk_content_models (= 6.1.0)
-  has_scope
-  inherited_resources
+  has_scope (= 0.5.1)
+  inherited_resources (= 1.4)
   jquery-rails
   kaminari (= 0.13.0)
   launchy
