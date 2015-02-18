@@ -144,7 +144,7 @@ GEM
     eventmachine (1.0.7)
     exception_notification (2.6.1)
       actionmailer (>= 3.0.4)
-    excon (0.44.1)
+    excon (0.44.2)
     execjs (2.3.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -217,13 +217,13 @@ GEM
     fog-serverlove (0.1.1)
       fog-core
       fog-json
-    fog-softlayer (0.4.0)
+    fog-softlayer (0.4.1)
       fog-core
       fog-json
     fog-storm_on_demand (0.1.0)
       fog-core
       fog-json
-    fog-terremark (0.0.3)
+    fog-terremark (0.0.4)
       fog-core
       fog-xml
     fog-vmfusion (0.0.1)
