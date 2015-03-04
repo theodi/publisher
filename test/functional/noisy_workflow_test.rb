@@ -115,16 +115,16 @@ class NoisyWorkflowTest < ActionMailer::TestCase
     context "Setting the recipients if no assignee" do
       should "send to 'publisher-alerts-business' for a business edition" do
         email = business_action_email(Action::PUBLISH)
-        assert_equal email.to.sort, ['quirkafleeg@theodi.org'].sort
+        assert_equal email.to.sort, ['production@theodi.org'].sort
         email = business_action_email(Action::APPROVE_REVIEW)
-        assert_equal email.to, ['quirkafleeg@theodi.org']
+        assert_equal email.to, ['production@theodi.org']
       end
 
       should "send to 'publisher-alerts-citizen' for a non-business edition" do
         email = action_email(Action::PUBLISH)
-        assert_equal email.to.sort, ['quirkafleeg@theodi.org'].sort
+        assert_equal email.to.sort, ['production@theodi.org'].sort
         email = action_email(Action::REQUEST_REVIEW)
-        assert_equal email.to.sort, ['quirkafleeg@theodi.org'].sort
+        assert_equal email.to.sort, ['production@theodi.org'].sort
       end
     end
 
