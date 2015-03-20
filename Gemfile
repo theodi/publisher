@@ -30,6 +30,7 @@ gem 'formtastic-bootstrap', git: 'https://github.com/cgunther/formtastic-bootstr
 gem 'gds-api-adapters', :github => 'theodi/gds-api-adapters'
 
 gem "nested_form", git: 'https://github.com/alphagov/nested_form.git', branch: 'add-wrapper-class'
+gem 'tagmanager-rails'
 
 if ENV['ODIDOWN_DEV']
   gem 'odidown', path: '../odidown'
@@ -58,7 +59,7 @@ gem 'reverse_markdown', '~> 0.3.0', require: false # Only used in some importers
 gem 'statsd-ruby', '1.0.0', require: false
 gem 'whenever', require: false
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.0.2'
 gem 'less-rails-bootstrap', '~> 2.0.0'
 gem 'thin'
 gem 'foreman', '< 0.65.0'
@@ -72,6 +73,10 @@ gem 'mongoid-tree'
 group :assets do
   gem "therubyracer", "~> 0.12.0"
   gem 'uglifier'
+end
+
+group :development do
+  gem 'quiet_assets'
 end
 
 group :test do
