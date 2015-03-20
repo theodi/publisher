@@ -84,5 +84,36 @@
     });
   </script>
 
+  <%# Adding this here because it's needed in all sub pages, and I'm not sure how those are organized. There might be a way to take this tagsManager script and put it in a less "global" place. %>
+  <script type="text/javascript">
+
+    $(".keyword-tags").tagsManager({
+      prefilled: '<%= @keywords %>',
+      hiddenTagListName: 'edition[keywords]'
+    });
+
+    $(".keyword-tags").typeahead({
+      hint: true,
+      highlight: true,
+      limit: 15,
+      source: [<%= @available_keywords.map{|x| "\"#{x}\""}.join(',').html_safe rescue nil %>],
+      updater: function(selection){
+        $("#keywords").val(selection);
+        addTag();
+      }
+    });
+
+    $("#edit_artefact").submit(function() {
+      addTag();
+    })
+
+    function addTag() {
+      console.log('add tag');
+      $("#keywords").trigger({ type : 'keypress', which : 44 })
+    }
+
+  </script>
+
+
 </body>
 </html>
