@@ -1,11 +1,11 @@
 <fieldset class='form-horizontal'>
-  
+
   <%= render partial: 'admin/shared/markdown_field', locals: { type: :content, form: f }%>
 
   <%= f.input :url,
               :as => :url,
               :input_html => { :class => 'span7' , :disabled => @resource.published?, } %>
- 
+
   <div class="control-group">
     <label class="control-label">Attachments</label>
     <div class="controls">
@@ -18,7 +18,7 @@
 
 <fieldset class='form-horizontal'>
   <legend>Media Enquiries</legend>
-  
+
   <%= f.input :media_enquiries_name,
               :label => "Name",
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
