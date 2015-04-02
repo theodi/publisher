@@ -148,9 +148,10 @@ class Admin::EditionsController < Admin::BaseController
 
     def set_keywords
       new_keywords = create_keywords(params) if params[:edition][:keywords]
-
-      @resource.artefact.update_attributes!(keywords: new_keywords)
-      @resource.artefact.save
+      if new_keywords
+        @resource.artefact.update_attributes!(keywords: new_keywords)
+        @resource.artefact.save
+      end
     end
 
     def create_keywords(params)
