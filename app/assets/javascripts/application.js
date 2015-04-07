@@ -6,7 +6,8 @@
 //= require_directory .
 //= require jquery_nested_form
 //= require bootstrap-datepicker
-//= require epiceditor 
+//= require epiceditor
+//= require tagmanager
 
 // System wide behaviours
 $(function () {

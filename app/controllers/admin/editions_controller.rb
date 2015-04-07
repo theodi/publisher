@@ -15,6 +15,7 @@ class Admin::EditionsController < Admin::BaseController
     if @resource.is_a?(Parted)
       @ordered_parts = @resource.parts.in_order
     end
+    get_keywords
     render
   end
 
@@ -58,6 +59,9 @@ class Admin::EditionsController < Admin::BaseController
 
     update! do |success, failure|
       success.html {
+        # Set the keywords in panopticon
+        set_keywords
+
         # Automatically start work if we haven't already
         if resource.can_start_work?
           command = EditionProgressor.new(resource, current_user, statsd)
@@ -132,5 +136,31 @@ class Admin::EditionsController < Admin::BaseController
 
     def description(r)
       r.format.underscore.humanize
+    end
+
+  private
+    def get_keywords
+      if @resource.artefact
+        @keywords = @resource.artefact.keywords.map { |k| k.title }.join(", ")
+      end
+      @available_keywords = Tag.where(tag_type: "keyword").map { |k| k.title }
+    end
+
+    def set_keywords
+      new_keywords = create_keywords(params) if params[:edition][:keywords]
+      if new_keywords
+        @resource.artefact.update_attributes!(keywords: new_keywords)
+        @resource.artefact.save
+      end
+    end
+
+    def create_keywords(params)
+      params[:edition][:keywords] = params[:edition][:keywords].split(',')
+      params[:edition][:keywords].each do |k|
+        Tag.find_or_create_by(tag_id: k.parameterize,
+                              title: k,
+                              tag_type: "keyword")
+      end
+      params[:edition][:keywords].map! { |k| k.parameterize }
     end
 end
