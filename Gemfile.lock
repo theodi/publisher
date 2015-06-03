@@ -475,7 +475,7 @@ DEPENDENCIES
   ci_reporter (~> 1.0)
   country-select!
   database_cleaner
-  dotenv-rails
+  dotenv-rails (~> 1.0)
   epic-editor-rails!
   erubis
   exception_notification (= 2.6.1)
