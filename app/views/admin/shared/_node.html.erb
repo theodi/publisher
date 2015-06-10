@@ -2,7 +2,14 @@
 
   <%= f.input :level,
               :as => :select,
-              :collection => ["country","city","comms"],
+              :collection => [
+                ["Country", "country"],
+                ["City", "city"],
+                ["Comms", "comms"],
+                ["Learning", "learning"],
+                ["Network", "network"],
+                ["Network & Learning", "network_learning"]
+              ],
               :include_blank => 'Please select',
               :input_html => { :class => 'span7' , :disabled => @resource.published? } %>
 
