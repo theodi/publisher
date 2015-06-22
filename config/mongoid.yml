@@ -6,7 +6,7 @@ development:
   use_activesupport_time_zone: true
 
 test:
-  host: <%= ENV['MONGOID_HOST'] ||= "localhost" %>
+  host: localhost
   # Don't want this interfering with a concurrent Panopticon test run
   database: govuk_content_publisher_test
   use_activesupport_time_zone: true
