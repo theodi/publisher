@@ -147,10 +147,10 @@ class Admin::EditionsController < Admin::BaseController
     end
 
     def set_keywords
-      new_keywords = create_keywords(params) if params[:edition][:keywords]
-      if new_keywords
+      new_keywords = (create_keywords(params) if params[:edition][:keywords]) || []
+      existing_keywords = @resource.artefact.keywords.map {|k| k.tag_id}
+      if new_keywords.sort != existing_keywords.sort
         @resource.artefact.update_attributes!(keywords: new_keywords)
-        @resource.artefact.save
       end
     end
 
