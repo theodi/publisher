@@ -19,6 +19,8 @@ Publisher::Application.configure do
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
+  if defined? ENV['DOCKERIZED'] then config.logger = Logger.new(STDOUT) end
+
   config.action_mailer.default_url_options = { :host => "www.#{ENV['GOVUK_APP_DOMAIN']}" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {

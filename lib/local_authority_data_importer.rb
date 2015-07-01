@@ -16,7 +16,7 @@ class LocalAuthorityDataImporter
   end
 
   def self.redis
-    redis_config = YAML.load_file(Rails.root.join("config", "redis.yml"))
+    redis_config = YAML.load(ERB.new(File.read(Rails.root.join("config", "redis.yml"))).result)
     Redis.new(redis_config.symbolize_keys)
   end
 
