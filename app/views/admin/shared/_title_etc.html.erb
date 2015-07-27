@@ -19,7 +19,7 @@
   <%= f.input :overview,
         :as => :text,
         :label => 'Meta tag description',
-        :hint => 'Some search engines will display this if they can&rsquo;t find what they need in the main text',
+        :hint => 'This will be used when the content is shared via social media. Aim for a couple of sentences, less than 200 characters total.',
         :input_html => { :class => "span7", :rows => 3, :disabled => @resource.published? } %>
 
     <%= f.label "keywords", class: 'control-label section-label' %>
