@@ -102,7 +102,7 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     addressable (2.3.8)
-    airbrake (4.3.0)
+    airbrake (4.3.1)
       builder
       multi_json
     ansi (1.5.0)
@@ -136,8 +136,6 @@ GEM
     daemons (1.2.3)
     database_cleaner (1.4.1)
     differ (0.1.2)
-    domain_name (0.5.24)
-      unf (>= 0.0.5, < 1.0.0)
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
@@ -188,7 +186,7 @@ GEM
     fog-atmos (0.1.0)
       fog-core
       fog-xml
-    fog-aws (0.7.4)
+    fog-aws (0.7.5)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
@@ -204,7 +202,7 @@ GEM
       mime-types
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
-    fog-dynect (0.0.1)
+    fog-dynect (0.0.2)
       fog-core
       fog-json
       fog-xml
@@ -286,8 +284,6 @@ GEM
     hashie (3.4.2)
     hike (1.2.3)
     htmlentities (4.3.4)
-    http-cookie (1.0.2)
-      domain_name (~> 0.5)
     http_parser.rb (0.5.3)
     httparty (0.13.5)
       json (~> 1.8)
@@ -330,6 +326,7 @@ GEM
       treetop (~> 1.4.8)
     metaclass (0.0.4)
     mime-types (1.25.1)
+    mini_portile (0.6.2)
     minitest (3.3.0)
     mlanett-redis-lock (0.2.2)
       redis
@@ -357,8 +354,8 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
-    netrc (0.10.3)
-    nokogiri (1.5.11)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     null_logger (0.0.1)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
@@ -470,9 +467,6 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.1)
     warden (1.2.3)
       rack (>= 1.0)
     webmock (1.8.11)
@@ -547,6 +541,3 @@ DEPENDENCIES
   uglifier
   webmock (~> 1.8.7)
   whenever
-
-BUNDLED WITH
-   1.10.4
