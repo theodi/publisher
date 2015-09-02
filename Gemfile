@@ -82,7 +82,7 @@ group :test do
   gem 'turn', '0.9.6'
   gem 'minitest', '3.3.0'
   gem 'shoulda'
-  gem 'database_cleaner'
+  gem 'database_cleaner', '1.4.1'
 
   gem 'capybara', '1.1.4'
   gem 'poltergeist'
