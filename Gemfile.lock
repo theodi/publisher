@@ -134,7 +134,7 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     daemons (1.2.3)
-    database_cleaner (1.5.0)
+    database_cleaner (1.4.1)
     differ (0.1.2)
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
@@ -489,7 +489,7 @@ DEPENDENCIES
   capybara (= 1.1.4)
   ci_reporter (~> 1.0)
   country-select!
-  database_cleaner
+  database_cleaner (= 1.4.1)
   dotenv-rails (~> 1.0)
   epic-editor-rails!
   erubis
