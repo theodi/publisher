@@ -134,7 +134,7 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     daemons (1.2.3)
-    database_cleaner (1.4.1)
+    database_cleaner (1.5.0)
     differ (0.1.2)
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
@@ -186,7 +186,7 @@ GEM
     fog-atmos (0.1.0)
       fog-core
       fog-xml
-    fog-aws (0.7.5)
+    fog-aws (0.7.6)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
@@ -464,7 +464,7 @@ GEM
     turn (0.9.6)
       ansi
     tzinfo (0.3.44)
-    uglifier (2.7.1)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
