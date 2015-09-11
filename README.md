@@ -1,4 +1,4 @@
-# Publisher
+# Publisher 
 
 Publisher is the primary content design app for GovUK. It provides the user interface for
 entering all the key editorial formats and an API so other apps (primarily frontend) can
