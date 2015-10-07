@@ -5,6 +5,11 @@ source 'https://rubygems.org'
 
 gem 'dotenv-rails', '~> 1.0' # Fix to 1.x for rails 3
 
+# Pinning these because we're still on 1.9.3 - can unpin once we get on new cookware
+gem 'rack-cache', '< 1.3.0'
+gem 'net-ssh', '< 3.0.0'
+gem 'fog-google', '< 0.1.0'
+
 gem 'aws-ses', require: 'aws/ses'
 
 if ENV['BUNDLE_DEV']
