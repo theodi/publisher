@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odlifier.git
-  revision: 1ae21699e9fc9363d4836c5ccd55c374a29e947e
+  revision: 9b9595cff21aa7db3b23c58c922cd82e920aead6
   specs:
     odlifier (0.1.1)
       httparty
@@ -102,7 +102,7 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     addressable (2.3.8)
-    airbrake (4.3.1)
+    airbrake (4.3.3)
       builder
       multi_json
     ansi (1.5.0)
@@ -240,7 +240,7 @@ GEM
     fog-serverlove (0.1.2)
       fog-core
       fog-json
-    fog-softlayer (0.4.7)
+    fog-softlayer (1.0.0)
       fog-core
       fog-json
     fog-storm_on_demand (0.1.1)
@@ -314,7 +314,7 @@ GEM
       less (~> 2.2.0)
     less-rails-bootstrap (2.0.13)
       less-rails (~> 2.2.0)
-    libv8 (3.16.14.11)
+    libv8 (3.16.14.13)
     link_header (0.0.8)
     lograge (0.2.0)
       actionpack
@@ -422,7 +422,7 @@ GEM
     safe_yaml (1.0.4)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
-    selenium-webdriver (2.47.1)
+    selenium-webdriver (2.48.1)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
