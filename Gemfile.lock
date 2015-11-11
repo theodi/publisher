@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odlifier.git
-  revision: 9b9595cff21aa7db3b23c58c922cd82e920aead6
+  revision: f49875e15e4e606edf75f01b1151d967b449af4a
   specs:
     odlifier (0.1.1)
       httparty
@@ -112,7 +112,7 @@ GEM
       mail (> 2.2.5)
       mime-types
       xml-simple
-    bootstrap-datepicker-rails (1.4.0)
+    bootstrap-datepicker-rails (1.5.0)
       railties (>= 3.0)
     bson (1.7.1)
     bson_ext (1.7.1)
