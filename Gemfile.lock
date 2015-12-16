@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/odlifier.git
-  revision: b68c7928d93b036854120617ecfce5042f5e0f47
+  revision: f55d3c3b455f0fd0a87134f76a53a52846306c89
   specs:
     odlifier (0.1.1)
       httparty
@@ -238,7 +238,7 @@ GEM
       fog-core
       fog-json
       fog-xml
-    fog-sakuracloud (1.4.0)
+    fog-sakuracloud (1.5.0)
       fog-core
       fog-json
     fog-serverlove (0.1.2)
@@ -472,7 +472,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    warden (1.2.3)
+    warden (1.2.4)
       rack (>= 1.0)
     webmock (1.8.11)
       addressable (>= 2.2.7)
