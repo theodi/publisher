@@ -71,7 +71,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'country-select', :github => 'ninkibah/country-select'
 gem 'epic-editor-rails', :github => 'zethussuen/epic-editor-rails'
 gem 'fog'
-gem 'airbrake'
+gem 'airbrake', '~> 4.3.4'
 gem 'mongoid-tree'
 
 group :assets do
