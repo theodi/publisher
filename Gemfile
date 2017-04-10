@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-#ruby=ruby-1.9.3
-#ruby-gemset=quirkafleeg-publisher
+ruby "1.9.3"
 
 gem 'dotenv-rails', '~> 1.0' # Fix to 1.x for rails 3
 
