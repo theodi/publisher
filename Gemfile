@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-#ruby=ruby-1.9.3
-#ruby-gemset=quirkafleeg-publisher
+ruby "1.9.3"
 
 gem 'dotenv-rails', '~> 1.0' # Fix to 1.x for rails 3
 
@@ -103,4 +102,8 @@ group :test do
   gem 'simplecov', '~> 0.6.4', :require => false
   gem 'simplecov-rcov', '~> 0.2.3', :require => false
   gem 'ci_reporter', "~> 1.0"
+end
+
+group :production do
+  gem "rails_12factor"
 end
