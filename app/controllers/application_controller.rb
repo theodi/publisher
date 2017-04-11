@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   include GDS::SSO::ControllerMethods
   
   def default_url_options(options={})
-    options.merge :protocol => "https" if Rails.env.production?
+    options.merge :protocol => "https"
   end
   
 end
