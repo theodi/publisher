@@ -1,0 +1,5 @@
+<%- (AttachableWithMetadata::ATTACHMENT_METADATA_FIELDS - [:spatial, :subject]).each do |field| %>
+  <%= f.input "file_#{field}".to_sym,
+              :input_html => { :class => 'span7'  } %>
+
+<% end %>

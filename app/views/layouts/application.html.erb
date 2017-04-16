@@ -29,6 +29,7 @@
         <nav role="navigation" class="nav-collapse">
           <ul class="nav">
             <%= nav_link 'All publications', admin_root_path %>
+            <%= nav_link 'Attachments', admin_attachments_path %>
             <%= nav_link 'Manage expectations', admin_expectations_path %>
             <li><%= link_to 'New Artefact', Plek.current.find('panopticon')+"/artefacts/new" %></li>
             <%= nav_link 'Reports', admin_reports_path %>
