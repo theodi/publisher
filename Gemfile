@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "1.9.3"
 
-gem 'dotenv-rails', '~> 1.0' # Fix to 1.x for rails 3
+gem 'dotenv-rails', '~> 2.2' # Fix to 1.x for rails 3
 
 # Pinning these because we're still on 1.9.3 - can unpin once we get on new cookware
 gem 'rack-cache', '< 1.3.0'
