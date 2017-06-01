@@ -358,7 +358,7 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    net-ssh (2.9.2)
+    net-ssh (4.0.1)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     null_logger (0.0.1)
@@ -528,7 +528,7 @@ DEPENDENCIES
   mongoid-tree
   mongoid_rails_migrations (= 1.0.0)
   nested_form!
-  net-ssh (< 3.0.0)
+  net-ssh (< 4.1.0)
   null_logger
   odi_content_models!
   odidown!
