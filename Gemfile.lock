@@ -136,9 +136,10 @@ GEM
     daemons (1.2.3)
     database_cleaner (1.4.1)
     differ (0.1.2)
-    dotenv (1.0.2)
-    dotenv-rails (1.0.2)
-      dotenv (= 1.0.2)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubis (2.7.0)
     eventmachine (1.2.3)
     exception_notification (2.6.1)
@@ -500,7 +501,7 @@ DEPENDENCIES
   ci_reporter (~> 1.0)
   country-select!
   database_cleaner (= 1.4.1)
-  dotenv-rails (~> 1.0)
+  dotenv-rails (~> 2.2)
   epic-editor-rails!
   erubis
   exception_notification (= 2.6.1)
