@@ -1,5 +1,4 @@
 require 'csv'
-require 'exception_notifier'
 require 'redis'
 require 'redis-lock'
 
@@ -51,7 +50,6 @@ class LocalAuthorityDataImporter
         process_row(row)
       rescue => e
         Rails.logger.error "Error #{e.class} processing row in #{self.class}\n#{e.backtrace.join("\n")}"
-        ExceptionNotifier::Notifier.background_exception_notification(e, :data => {:row => row})
       end
     end
   end

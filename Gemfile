@@ -9,8 +9,6 @@ gem 'rack-cache', '< 1.7.0'
 gem 'net-ssh', '< 3.0.0'
 gem 'fog-google', '< 0.1.0'
 
-gem 'aws-ses', require: 'aws/ses'
-
 if ENV['BUNDLE_DEV']
   gem 'gds-sso', path: '../gds-sso'
 else
@@ -26,7 +24,6 @@ else
 end
 
 gem 'erubis'
-gem 'exception_notification', '2.6.1', require: false
 gem 'formtastic', git: 'https://github.com/justinfrench/formtastic.git', branch: '2.1-stable'
 gem 'formtastic-bootstrap', git: 'https://github.com/cgunther/formtastic-bootstrap.git', branch: 'bootstrap-2'
 
