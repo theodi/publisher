@@ -50,7 +50,7 @@ gem 'lograge', '0.2.0'
 gem 'mongo', '1.7.1'
 gem "mongoid_rails_migrations", "1.0.0"
 gem 'null_logger'
-gem 'plek', '1.4.0'
+gem 'plek', '2.0.0'
 gem 'rails', '~> 3.2.16'
 
 gem 'redis', '3.0.3', require: false # Only used in some importers
