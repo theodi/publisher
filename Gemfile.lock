@@ -330,7 +330,7 @@ GEM
     mime-types (1.25.1)
     mini_portile2 (2.0.0)
     minitest (3.3.0)
-    mlanett-redis-lock (0.2.2)
+    mlanett-redis-lock (0.2.7)
       redis
     mocha (0.13.3)
       metaclass (~> 0.0.1)
@@ -515,7 +515,7 @@ DEPENDENCIES
   less-rails-bootstrap (~> 2.0.0)
   lograge (= 0.3.6)
   minitest (= 3.3.0)
-  mlanett-redis-lock (= 0.2.2)
+  mlanett-redis-lock (= 0.2.7)
   mocha (= 0.13.3)
   mongo (= 1.7.1)
   mongoid-tree
