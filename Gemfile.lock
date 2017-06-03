@@ -420,7 +420,7 @@ GEM
       railties (~> 3.1)
     rest-client (1.6.9)
       mime-types (~> 1.16)
-    retriable (2.1.0)
+    retriable (3.0.2)
     reverse_markdown (0.3.0)
       nokogiri
     rubyzip (1.1.7)
