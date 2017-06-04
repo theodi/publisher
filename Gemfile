@@ -60,7 +60,7 @@ gem 'statsd-ruby', '1.0.0', require: false
 gem 'whenever', require: false
 
 gem 'jquery-rails', '2.0.2'
-gem 'less-rails-bootstrap', '~> 2.0.0'
+gem 'less-rails-bootstrap', '~> 3.3.5'
 gem 'thin'
 gem 'foreman', '< 0.65.0'
 gem 'bootstrap-datepicker-rails'
