@@ -92,7 +92,7 @@ group :test do
   gem 'webmock', '~> 1.8.7'
   gem 'mocha', '0.13.3', :require => false
   gem 'factory_girl_rails'
-  gem 'faker', '1.1.2'
+  gem 'faker', '1.7.3'
 
   gem "timecop"
 
