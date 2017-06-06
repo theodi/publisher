@@ -71,7 +71,7 @@ gem 'airbrake'
 gem 'mongoid-tree'
 
 group :assets do
-  gem "therubyracer", "~> 0.12.0"
+  gem "therubyracer", "~> 0.12.3"
   gem 'uglifier'
 end
 
