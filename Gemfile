@@ -42,7 +42,7 @@ gem 'odlifier', github: 'theodi/odlifier'
 
 gem 'has_scope', '0.5.1'
 gem 'inherited_resources', '1.4'
-gem 'kaminari', '0.13.0'
+gem 'kaminari', '0.17.0'
 gem 'lograge', '0.3.6'
 gem 'mongo', '1.7.1'
 gem "mongoid_rails_migrations", "1.0.0"
