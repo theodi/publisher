@@ -42,21 +42,21 @@ gem 'odlifier', github: 'theodi/odlifier'
 
 gem 'has_scope', '0.5.1'
 gem 'inherited_resources', '1.4'
-gem 'kaminari', '0.13.0'
+gem 'kaminari', '0.17.0'
 gem 'lograge', '0.3.6'
 gem 'mongo', '1.7.1'
 gem "mongoid_rails_migrations", "1.0.0"
 gem 'null_logger'
-gem 'plek', '1.4.0'
+gem 'plek', '2.0.0'
 gem 'rails', '~> 3.2.16'
 
 gem 'redis', '3.0.3', require: false # Only used in some importers
-gem 'mlanett-redis-lock', '0.2.2' # Only used in some importers
+gem 'mlanett-redis-lock', '0.2.7' # Only used in some importers
 gem 'rest-client', require: false # Only used in some importers
 gem 'retriable', require: false # Only used in some importers
 gem 'reverse_markdown', '~> 0.3.0', require: false # Only used in some importers
 
-gem 'statsd-ruby', '1.0.0', require: false
+gem 'statsd-ruby', '1.4.0', require: false
 gem 'whenever', require: false
 
 gem 'jquery-rails', '2.0.2'
