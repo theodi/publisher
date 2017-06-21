@@ -131,6 +131,7 @@ GEM
     daemons (1.2.4)
     database_cleaner (1.4.1)
     differ (0.1.2)
+    docile (1.1.5)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
@@ -438,10 +439,11 @@ GEM
     shoulda-context (1.2.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
-    simplecov (0.6.4)
-      multi_json (~> 1.0)
-      simplecov-html (~> 0.5.3)
-    simplecov-html (0.5.3)
+    simplecov (0.14.1)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.1)
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
     sprockets (2.2.3)
@@ -537,7 +539,7 @@ DEPENDENCIES
   retriable
   reverse_markdown (~> 0.3.0)
   shoulda
-  simplecov (~> 0.6.4)
+  simplecov (~> 0.14.1)
   simplecov-rcov (~> 0.2.3)
   statsd-ruby (= 1.0.0)
   tagmanager-rails
