@@ -56,7 +56,7 @@ gem 'rest-client', require: false # Only used in some importers
 gem 'retriable', require: false # Only used in some importers
 gem 'reverse_markdown', '~> 0.3.0', require: false # Only used in some importers
 
-gem 'statsd-ruby', '1.0.0', require: false
+gem 'statsd-ruby', '1.4.0', require: false
 gem 'whenever', require: false
 
 gem 'jquery-rails', '2.0.2'
