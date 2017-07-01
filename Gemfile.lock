@@ -282,6 +282,7 @@ GEM
       plek
       state_machine
     has_scope (0.5.1)
+    hashdiff (0.3.4)
     hashie (3.4.3)
     hike (1.2.3)
     htmlentities (4.3.4)
@@ -474,9 +475,10 @@ GEM
       json (>= 1.8.0)
     warden (1.2.4)
       rack (>= 1.0)
-    webmock (1.8.11)
-      addressable (>= 2.2.7)
-      crack (>= 0.1.7)
+    webmock (2.3.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     websocket (1.2.2)
     whenever (0.9.7)
       chronic (>= 0.6.3)
@@ -546,7 +548,7 @@ DEPENDENCIES
   timecop
   turn (= 0.9.6)
   uglifier
-  webmock (~> 1.8.7)
+  webmock (~> 2.3.2)
   whenever
 
 RUBY VERSION
