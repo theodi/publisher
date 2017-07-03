@@ -89,7 +89,7 @@ group :test do
   gem 'poltergeist'
   gem 'launchy'
 
-  gem 'webmock', '~> 1.8.7'
+  gem 'webmock', '~> 3.0.0'
   gem 'mocha', '1.2.1', :require => false
   gem 'factory_girl_rails'
   gem 'faker', '1.1.2'
