@@ -48,7 +48,7 @@ gem 'mongo', '1.7.1'
 gem "mongoid_rails_migrations", "1.0.0"
 gem 'null_logger'
 gem 'plek', '2.0.0'
-gem 'rails', '~> 3.2.16'
+gem 'rails', '~> 3.2.22'
 
 gem 'redis', '3.0.3', require: false # Only used in some importers
 gem 'mlanett-redis-lock', '0.2.7' # Only used in some importers
