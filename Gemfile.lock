@@ -101,7 +101,8 @@ GEM
     activesupport (3.2.22)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
-    addressable (2.4.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     airbrake (4.3.4)
       builder
       multi_json
@@ -321,6 +322,7 @@ GEM
       plek
       state_machine
     has_scope (0.5.1)
+    hashdiff (0.3.4)
     hashie (3.4.3)
     hike (1.2.3)
     htmlentities (4.3.4)
@@ -418,6 +420,7 @@ GEM
       http_parser.rb (~> 0.5.3)
       multi_json (~> 1.0)
     polyglot (0.3.5)
+    public_suffix (2.0.4)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.4.7)
@@ -518,9 +521,10 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.4)
       rack (>= 1.0)
-    webmock (1.8.11)
-      addressable (>= 2.2.7)
-      crack (>= 0.1.7)
+    webmock (3.0.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     websocket (1.2.2)
     whenever (0.9.7)
       chronic (>= 0.6.3)
@@ -590,7 +594,7 @@ DEPENDENCIES
   timecop
   turn (= 0.9.6)
   uglifier
-  webmock (~> 1.8.7)
+  webmock (~> 3.0.0)
   whenever
 
 RUBY VERSION
