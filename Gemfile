@@ -98,7 +98,7 @@ group :test do
 
   gem 'simplecov', '~> 0.14.1', :require => false
   gem 'simplecov-rcov', '~> 0.2.3', :require => false
-  gem 'ci_reporter', "~> 1.0"
+  gem 'ci_reporter', "~> 2.0"
 end
 
 group :production do
