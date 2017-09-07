@@ -5,7 +5,7 @@ ruby "1.9.3"
 gem 'dotenv-rails', '~> 2.2' # Fix to 1.x for rails 3
 
 # Pinning these because we're still on 1.9.3 - can unpin once we get on new cookware
-gem 'rack-cache', '< 1.7.0'
+gem 'rack-cache', '< 1.8.0'
 gem 'net-ssh', '< 3.0.0'
 gem 'fog-google', '< 0.1.0'
 
