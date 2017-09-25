@@ -40,7 +40,7 @@ GIT
 
 GIT
   remote: git://github.com/zethussuen/epic-editor-rails.git
-  revision: 9a4319d1f23e90fae19b3e3d5fe962609d33cec4
+  revision: 240f5b31af411b7d6e16e888d511f9dc655ff326
   specs:
     epic-editor-rails (0.2.4)
       railties (>= 3.2, < 5.0)
@@ -328,7 +328,7 @@ GEM
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    i18n (0.8.4)
+    i18n (0.8.6)
     inflecto (0.0.2)
     inherited_resources (1.4.0)
       has_scope (~> 0.5.0)
@@ -388,7 +388,7 @@ GEM
     mongoid_spacial (0.2.17)
       activesupport (~> 3.0)
       mongoid (>= 2.1.0, < 3.0.0)
-    multi_json (1.12.1)
+    multi_json (1.12.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     net-ssh (2.9.2)
@@ -449,7 +449,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (12.0.0)
+    rake (12.1.0)
     rbvmomi (1.11.3)
       builder (~> 3.0)
       json (>= 1.8)
