@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/theodi/gds-api-adapters.git
-  revision: 1a963d9064719d1aff608e6b7232166ae4af489b
+  revision: d1c4ce05b00dc71712b93502c7df43362ca9671e
   specs:
     gds-api-adapters (7.25.0)
       activesupport
@@ -328,7 +328,7 @@ GEM
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    i18n (0.8.4)
+    i18n (0.8.6)
     inflecto (0.0.2)
     inherited_resources (1.4.0)
       has_scope (~> 0.5.0)
@@ -388,7 +388,7 @@ GEM
     mongoid_spacial (0.2.17)
       activesupport (~> 3.0)
       mongoid (>= 2.1.0, < 3.0.0)
-    multi_json (1.12.1)
+    multi_json (1.12.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     net-ssh (2.9.2)
