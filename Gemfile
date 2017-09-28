@@ -12,7 +12,7 @@ gem 'fog-google', '< 0.1.0'
 if ENV['BUNDLE_DEV']
   gem 'gds-sso', path: '../gds-sso'
 else
-  gem 'gds-sso', '9.2.2'
+  gem 'gds-sso', '= 9.4.0'
 end
 
 gem "govuk_content_models", '6.1.0'
