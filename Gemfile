@@ -50,7 +50,7 @@ gem 'null_logger'
 gem 'plek', '2.0.0'
 gem 'rails', '~> 3.2.16'
 
-gem 'redis', '3.0.3', require: false # Only used in some importers
+gem 'redis', '4.0.1', require: false # Only used in some importers
 gem 'mlanett-redis-lock', '0.2.7' # Only used in some importers
 gem 'rest-client', require: false # Only used in some importers
 gem 'retriable', require: false # Only used in some importers
