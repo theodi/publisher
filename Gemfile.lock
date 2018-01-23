@@ -514,7 +514,7 @@ GEM
     turn (0.9.6)
       ansi
     tzinfo (0.3.46)
-    uglifier (3.2.0)
+    uglifier (4.1.4)
       execjs (>= 0.3.0, < 3)
     warden (1.2.4)
       rack (>= 1.0)
