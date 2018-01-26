@@ -81,7 +81,7 @@ end
 
 group :test do
   gem 'turn', '0.9.6'
-  gem 'minitest', '3.3.0'
+  gem 'minitest', '5.11.2'
   gem 'shoulda'
   gem 'database_cleaner', '1.4.1'
 
