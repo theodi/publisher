@@ -85,7 +85,7 @@ group :test do
   gem 'shoulda'
   gem 'database_cleaner', '1.4.1'
 
-  gem 'capybara', '1.1.4'
+  gem 'capybara', '2.18.0'
   gem 'poltergeist'
   gem 'launchy'
 
