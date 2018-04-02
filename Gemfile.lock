@@ -361,7 +361,7 @@ GEM
       railties (>= 3)
     lrucache (0.1.4)
       PriorityQueue (~> 0.1.2)
-    mail (2.5.4)
+    mail (2.5.5)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     metaclass (0.0.4)
