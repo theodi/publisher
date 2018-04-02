@@ -466,7 +466,7 @@ GEM
     retriable (2.1.0)
     reverse_markdown (0.3.0)
       nokogiri
-    rubyzip (1.1.7)
+    rubyzip (1.2.1)
     safe_yaml (1.0.4)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
