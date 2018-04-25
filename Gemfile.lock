@@ -464,7 +464,7 @@ GEM
     rest-client (1.6.9)
       mime-types (~> 1.16)
     retriable (2.1.0)
-    reverse_markdown (0.3.0)
+    reverse_markdown (1.1.0)
       nokogiri
     rubyzip (1.1.7)
     safe_yaml (1.0.4)
@@ -579,7 +579,7 @@ DEPENDENCIES
   redis (= 3.0.3)
   rest-client
   retriable
-  reverse_markdown (~> 0.3.0)
+  reverse_markdown (~> 1.1.0)
   shoulda
   simplecov (~> 0.14.1)
   simplecov-rcov (~> 0.2.3)
